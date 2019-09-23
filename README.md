@@ -1,4 +1,4 @@
-# Shitty repo
+# IDK repo
 
 some shitty new readme for shitty project
 

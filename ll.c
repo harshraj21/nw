@@ -18,7 +18,7 @@ void main(){
     start = NULL;
 
     for(;;){
-        printf("\nLinked List Generation\n1: Create\n2: Delete\n3: Display\n4: Exit\nEnter Your Choice: ");
+        printf("\nLinked List Generation\n1: Insert one\n2: Delete one\n3: Delete by elem.\n4: Delete by pos.\n5: Display all\n6: Delete all\n7: Insert by position\n8: Insert by value (after)\n9: Insert by value (before)\n0: Exit\nEnter Your Choice: ");
         scanf("%d",&ch);
         switch (ch)
         {
@@ -28,10 +28,10 @@ void main(){
             case 2: delete();
             break;
 
-            case 3: display();
+            case 5: display();
             break;
 
-            case 4: exit(1);
+            case 0: exit(1);
             break;
         
             default: printf("\nInvalid Choice!\n");

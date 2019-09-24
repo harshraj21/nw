@@ -7,7 +7,6 @@ struct node{
 }*ptr;
 
 struct node *start;
-struct node *end;
 
 void display();
 void create();
@@ -17,7 +16,6 @@ void main(){
     int ch;
 
     start = NULL;
-    end = NULL;
 
                                             /*Updates Coming*/
 
@@ -53,7 +51,8 @@ void create(){
         if(ptr == NULL){
             printf("\nWarning: Computer Memory Full!\n");
             return;
-        }else{
+        }
+        else{
             ptr->val = val2;
             ptr->next = NULL;
             start = ptr;
@@ -65,7 +64,7 @@ void create(){
         ptr->next = start;
         start = ptr;
         printf("\nLinked List Sucessfully Generated and value stored!\n\n");
-    }  
+    }
 }
 
 void display(){
@@ -76,7 +75,7 @@ void display(){
     else{
         i=0;
         printf("\nPrinting the stored values\n\n");
-        while(ptr->next!=NULL){
+        while(ptr!=NULL){
             printf("%d: %d\n",++i,(ptr->val));
             ptr = ptr->next;
         }
@@ -84,5 +83,16 @@ void display(){
 }
 
 void delete(){
-
+    int tmp;
+    if(start == NULL){
+        printf("\nWarning: List is Empty!\n");
+    }
+    else{
+        ptr = start;
+        ptr = ptr->next;
+        tmp = start->val;
+        free(start);
+        start = ptr;
+        printf("\n%d Deleted Sucessfully!\n",tmp);
+    }
 }

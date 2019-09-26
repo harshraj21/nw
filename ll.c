@@ -52,8 +52,12 @@ void main(){
 
 void create(){
     int val2;
+<<<<<<< HEAD
     struct node *tmp;
     tmp = start;
+=======
+    struct node *temp;
+>>>>>>> v1.0
     printf("\nEnter The Value To Store: ");
     scanf("%d",&val2);
     ptr = (struct node*)malloc(sizeof(struct node));
@@ -73,10 +77,19 @@ void create(){
     else{
         ptr->val = val2;
         ptr->next = NULL;
+<<<<<<< HEAD
         while(tmp->next!=NULL){
             tmp = tmp->next;
         }
         tmp->next = ptr;
+=======
+        temp = start;
+        while(temp->next!=NULL){
+            temp = temp->next;
+        }
+        temp->next = ptr;
+        //start = ptr;
+>>>>>>> v1.0
         printf("\nLinked List Sucessfully Generated and value stored!\n\n");
         count++;
     }

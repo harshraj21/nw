@@ -1,5 +1,5 @@
-# IDK repo
+# Casual repo
 
-some shitty new readme for shitty project
+This is not a shitty project anymore;
 
 # #Blockchain

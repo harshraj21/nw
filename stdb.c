@@ -59,31 +59,43 @@ void add(){
     ptr = (struct stud*)malloc(sizeof(struct stud));
 
     if(ptr == NULL){
-        printf("Alert: Memory is Full Allocation Insucessfull!");
+        printf("Alert: Memory is Full Allocation Unsucessfull!");
     }
     else{
         if(is_empty() == 1){
-            ptr->name = name;
-            ptr->usn = usn;
-            ptr->sem = sem;
-            ptr->sec = sec;
-            ptr->mob = mob;
+            // ptr->name = name; //strcpy(ptr->name,name)
+            // ptr->usn = usn;
+            // ptr->sem = sem;
+            // ptr->sec = sec;
+            // ptr->mob = mob;
+            // ptr->next = NULL;
+            strcpy(ptr->name,name);
+            strcpy(ptr->usn,usn);
+            strcpy(ptr->sem,sem);
+            strcpy(ptr->sec,sec);
+            strcpy(ptr->mob,mob);
             ptr->next = NULL;
             start = ptr;
         }
         else{
             tmp = start;
-            ptr->name = name;
-            ptr->usn = usn;
-            ptr->sem = sem;
-            ptr->sec = sec;
-            ptr->mob = mob;
+            // ptr->name = name;
+            // ptr->usn = usn;
+            // ptr->sem = sem;
+            // ptr->sec = sec;
+            // ptr->mob = mob;
+            strcpy(ptr->name,name);
+            strcpy(ptr->usn,usn);
+            strcpy(ptr->sem,sem);
+            strcpy(ptr->sec,sec);
+            strcpy(ptr->mob,mob);
             while(tmp->next!=NULL){
                 tmp = tmp->next;
             }
             tmp->next = ptr;
             ptr->next = NULL;
         }
+        count++;
         printf("\nList Generated Sucessfull!\n");
     }
 }
@@ -95,11 +107,11 @@ void display(){
         printf("\nAlert: Memory is Full Allocation Insucessfull!\n");
     }
     else{
-        printf("\n\nPrinting Stored Data\n");
+        printf("\n\nPrinting Stored Data\n\n\n");
         while(tmp!=NULL){
             printf("Name: %s\n",tmp->name);
             printf("Usn: %s\n",tmp->usn);
-            printf("Sem: %S\n",tmp->sem);
+            printf("Sem: %s\n",tmp->sem);
             printf("Sec: %s\n",tmp->sec);
             printf("Mob: %s\n\n",tmp->mob);
             tmp = tmp->next;
